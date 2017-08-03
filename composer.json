@@ -5,5 +5,10 @@
 			"name": "Anggara Setiawan",
 			"email": "anggara@kaskusnetworks.com"
 		}
-	]
+	],
+	"autoload": {
+		"psr-4": {
+			"Anggara\\Classes\\": "classes/"
+		}
+	}
 }
