@@ -1,3 +1,12 @@
+"""
+Calculator Module
+
+This module provides a simple Calculator class with basic arithmetic operations.
+
+Classes:
+    Calculator: A class with static methods for addition, subtraction, multiplication, and division.
+"""
+
 class Calculator:
     @staticmethod
     def add(a, b):
