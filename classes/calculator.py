@@ -20,6 +20,7 @@ class Calculator:
         Returns:
             float: The sum of the two numbers.
         """
+        Calculator._validate_input(a, b)
         return a + b
 
     @staticmethod
@@ -34,6 +35,7 @@ class Calculator:
         Returns:
             float: The difference of the two numbers.
         """
+        Calculator._validate_input(a, b)
         return a - b
 
     @staticmethod
@@ -48,6 +50,7 @@ class Calculator:
         Returns:
             float: The product of the two numbers.
         """
+        Calculator._validate_input(a, b)
         return a * b
 
     @staticmethod
@@ -65,6 +68,7 @@ class Calculator:
         Raises:
             ValueError: If the divisor is zero.
         """
+        Calculator._validate_input(a, b)
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
@@ -81,4 +85,20 @@ class Calculator:
         Returns:
             float: The result of raising the base to the power of the exponent.
         """
+        Calculator._validate_input(a, b)
         return a ** b
+
+    @staticmethod
+    def _validate_input(a, b):
+        """
+        Validate that inputs are numeric.
+
+        Args:
+            a: The first input.
+            b: The second input.
+
+        Raises:
+            TypeError: If any input is not numeric.
+        """
+        if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+            raise TypeError("Inputs must be numeric")
