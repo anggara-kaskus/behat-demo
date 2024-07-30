@@ -4,7 +4,7 @@ Calculator Module
 This module provides a simple Calculator class with basic arithmetic operations.
 
 Classes:
-    Calculator: A class with static methods for addition, subtraction, multiplication, and division.
+    Calculator: A class with static methods for addition, subtraction, multiplication, division, and power.
 """
 
 class Calculator:
@@ -25,3 +25,7 @@ class Calculator:
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
+
+    @staticmethod
+    def power(a, b):
+        return a ** b
